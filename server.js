@@ -9,6 +9,8 @@ const image = require('./controllers/image');
 
 const db = require('./config/config');
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; 
+
 const knex = db.knex;
 const app = express();
 app.use(express.json());
