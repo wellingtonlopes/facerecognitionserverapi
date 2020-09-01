@@ -7,7 +7,7 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
-const db = require('./config');
+const db = require('./config/config');
 
 const knex = db.knex;
 const app = express();
