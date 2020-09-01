@@ -14,9 +14,14 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get('/', async (req, res) => {
-    const users = await knex.select('*').from('users');
-    res.send(users);
+app.get('/', (req, res) => {
+    /* try {
+        const users = await knex.select('*').from('users');
+        res.send(users);
+    } catch (error) {
+        res.status(400).json('Could not get users data')
+    } */
+    res.send('It is alive!!')
 })
 
 app.post('/signin', (req, res) => { signin.hangleSignin(req, res, knex, bcrypt) })
