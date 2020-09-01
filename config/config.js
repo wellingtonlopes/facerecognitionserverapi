@@ -1,10 +1,8 @@
 const knex = require('knex')({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
-      user : 'well',
-      password : 'umbrella7',
-      database : 'smart-brain'
+      connectionString : process.env.DATABASE_URL,
+      ssl: true
     }
   });
 
